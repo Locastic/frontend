@@ -1,0 +1,42 @@
+{
+  "name": "@locastic/eslint-config-core-js",
+  "version": "1.0.0",
+  "description": "Locastic's ESLint core JavaScript rules",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Locastic/frontend.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "locastic",
+    "javascript",
+    "styleguide",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018"
+  ],
+  "author": "Locastic FE Team <fe@locastic.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Locastic/frontend/issues"
+  },
+  "homepage": "https://github.com/Locastic/frontend#readme",
+  "peerDependencies": {
+    "eslint": ">=8",
+    "eslint-plugin-import": ">=2.26.0"
+  },
+  "devDependencies": {
+    "eslint": ">=8",
+    "eslint-plugin-import": ">=2.26.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
