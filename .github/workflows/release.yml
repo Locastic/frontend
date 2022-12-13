@@ -38,10 +38,44 @@ jobs:
 
       - name: Send a Slack notification if a publish happens
         if: steps.changesets.outputs.published == 'true'
+        # You can do something when a publish happens.
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
-        # You can do something when a publish happens.
         with:
-          payload-file-path: ".github/workflows/payloads/new_version.json"
+          # Slack channel id, channel name, or user id to post message.
+          # See also: https://api.slack.com/methods/chat.postMessage#channels
+          # You can pass in multiple channels to post to by providing a comma-delimited list of channel IDs.
+          channel-id: 'C04EVJP45D3'
+          # For posting a simple plain text message
+          payload: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "A new version of <https://github.com/Locastic/frontend|Locastic packages> was published on <https://www.npmjs.com/org/locastic|Locastic NPM Registry>!"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "<${{ github.event.pull_request.html_url || github.event.head_commit.url }}|Changes>"
+                  },
+                  "accessory": {
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Visit",
+                      "emoji": true
+                    },
+                    "value": "Visit",
+                    "url": "${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+                    "action_id": "button-action"
+                  }
+                }
+              ]
+            }
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
