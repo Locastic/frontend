@@ -1,0 +1,11 @@
+{
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "A new version of <${GITHUB_REPOSITORY}> was published!"
+			}
+		}
+	]
+}
