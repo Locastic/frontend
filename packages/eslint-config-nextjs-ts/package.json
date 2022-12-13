@@ -1,6 +1,6 @@
 {
   "name": "@locastic/eslint-config-nextjs-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Locastic's ESLint Next.js TypeScript rules",
   "main": "index.js",
   "scripts": {
