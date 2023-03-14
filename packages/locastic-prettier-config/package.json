@@ -1,0 +1,29 @@
+{
+  "name": "@locastic/prettier-config",
+  "version": "1.0.0",
+  "description": "Locastic's Prettier Config",
+  "main": "index.json",
+  "scripts": {
+    "clean": "rm -rf node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Locastic/frontend.git"
+  },
+  "keywords": [
+    "prettier",
+    "locastic"
+  ],
+  "author": "Locastic FE Team <fe@locastic.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Locastic/frontend/issues"
+  },
+  "homepage": "https://github.com/Locastic/frontend#readme",
+  "dependencies": {
+    "prettier": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
